@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test1122]]></title>
-    <url>%2F2019%2F04%2F10%2Ftest1122%2F</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[test11]]></title>
-    <url>%2F2019%2F04%2F10%2Ftest11%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2F2019%2F04%2F10%2Ftest-1%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[测试]]></title>
-    <url>%2F2019%2F04%2F10%2Ftest%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" 哈哈哈哈哈哈哈哈哈哈哈哈啊啊啊啊啊啊啊啊啊啊]]></content>
+    <title><![CDATA[js从数组中的对象取出特定字段并生成新的数组]]></title>
+    <url>%2F2019%2F04%2F12%2Fjs%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1%E5%8F%96%E5%87%BA%E7%89%B9%E5%AE%9A%E5%AD%97%E6%AE%B5%E5%B9%B6%E7%94%9F%E6%88%90%E6%96%B0%E7%9A%84%E6%95%B0%E7%BB%84%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718var arr = [ &#123; 'id': '1', 'name': 'img1', 'imgUrl': './img1.jpg', &#125;, &#123; 'id': '2', 'name: 'img2', 'imgUrl': './img2.jpg', &#125;, &#123; 'id': '3', 'name': 'img3', 'imgUrl': './img3.jpg', &#125;];arr.map(x =&gt; &#123;return x.imgUrl&#125;) // 生成数组]]></content>
       <categories>
-        <category>测试</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>前端基础</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F04%2F10%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[解决div中嵌套元素时，二者点击事件同时触发]]></title>
+    <url>%2F2019%2F04%2F12%2F%E8%A7%A3%E5%86%B3div%E4%B8%AD%E5%B5%8C%E5%A5%97%E5%85%83%E7%B4%A0%E6%97%B6%EF%BC%8C%E4%BA%8C%E8%80%85%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E5%90%8C%E6%97%B6%E8%A7%A6%E5%8F%91%2F</url>
+    <content type="text"><![CDATA[阻止JS冒泡事件~ 以Angualr为例： 12345&lt;div class="previewImg" (click)="closeImg()"&gt; &lt;img id="leftArrow" *ngIf="mid &gt; left" (click)="leftImg($event)" src="../../../assets/community/leftArrow@3x.png"/&gt; &lt;img id="pre" src="&#123;&#123;imageUrl&#125;&#125;"/&gt; &lt;img id="rightArrow" *ngIf="mid &lt; right" (click)="rightImg($event)" src="../../../assets/community/rightArrow@3x.png"/&gt;&lt;/div&gt; 点击left或right时同时会触发外层的closeImg()事件，此时需阻止JS的冒泡事件。 1234567891011closeImg() &#123; this.imageUrl = '';&#125;leftImg(e) &#123; alert('left!'); e.stopPropagation();&#125;rightImg(e) &#123; alert('right!') e.stopPropagation();&#125;]]></content>
       <categories>
-        <category>学习笔记</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>前端基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[安卓手机端网页，开启输入法时页面内容被压缩的解决方法]]></title>
+    <url>%2F2019%2F04%2F12%2F%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E7%AB%AF%E7%BD%91%E9%A1%B5%EF%BC%8C%E5%BC%80%E5%90%AF%E8%BE%93%E5%85%A5%E6%B3%95%E6%97%B6%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E8%A2%AB%E5%8E%8B%E7%BC%A9%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[在安卓手机端的网页中，打开输入框会使页面的整体内容压缩（可能因为我使用了百分比的布局）而在iphone浏览网页时则不会出现这种问题。对于这种情况需要添加部分js代码来防止页面的压缩。 123456789var h1 = $('body').height();var h2 = $('#upMenu').height();var h3 = $('#main').height();$(window).resize(function() &#123; $('body').height(h1); $('#upMenu').height(h2); $('#main').height(h3); $('#main').css('top', h2);&#125;); 我的页面是由upmenu和main两部分构成。具体原理是当浏览器窗口大小发生变化时调用函数$(window).resize，让输入法打开后的页面的body高度等于输入法打开前的页面的body高度，其他页面中的元素根据其定位方式去设置height或top、margin-top等样式即可。]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>前端基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[手机端网页图片之间出现白线的解决方法]]></title>
+    <url>%2F2019%2F04%2F12%2F%E6%89%8B%E6%9C%BA%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87%E4%B9%8B%E9%97%B4%E5%87%BA%E7%8E%B0%E7%99%BD%E7%BA%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[我开发的实际情况是一个纵向的图片的列表，每个img由div包裹，在手机段访问是图片之间会出现一条白线。原因是：img默认是内联模块，需要将其设置为display: block;当然div之间也不要有margin~ 如图为修改后的情况（修改前的情况找不到了(:з)∠)）]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>前端基础</tag>
       </tags>
   </entry>
 </search>

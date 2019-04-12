@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-10T11:36:21.821Z</updated>
+  <updated>2019-04-12T13:02:21.793Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,99 +17,95 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test1122</title>
-    <link href="http://yoursite.com/2019/04/10/test1122/"/>
-    <id>http://yoursite.com/2019/04/10/test1122/</id>
-    <published>2019-04-10T11:35:29.000Z</published>
-    <updated>2019-04-10T11:36:21.821Z</updated>
+    <title>js从数组中的对象取出特定字段并生成新的数组</title>
+    <link href="http://yoursite.com/2019/04/12/js%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1%E5%8F%96%E5%87%BA%E7%89%B9%E5%AE%9A%E5%AD%97%E6%AE%B5%E5%B9%B6%E7%94%9F%E6%88%90%E6%96%B0%E7%9A%84%E6%95%B0%E7%BB%84/"/>
+    <id>http://yoursite.com/2019/04/12/js从数组中的对象取出特定字段并生成新的数组/</id>
+    <published>2019-04-12T12:58:09.000Z</published>
+    <updated>2019-04-12T13:02:21.793Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/2019/04/10/test1122/test.png" alt="test"></p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">'id'</span>: <span class="string">'1'</span>,</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'img1'</span>,</span><br><span class="line">    <span class="string">'imgUrl'</span>: <span class="string">'./img1.jpg'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">'id'</span>: <span class="string">'2'</span>,</span><br><span class="line">    <span class="string">'name: '</span>img2<span class="string">',</span></span><br><span class="line"><span class="string">    '</span>imgUrl<span class="string">': '</span>./img2.jpg<span class="string">',</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  &#123;</span></span><br><span class="line"><span class="string">    '</span>id<span class="string">': '</span><span class="number">3</span><span class="string">',</span></span><br><span class="line"><span class="string">    '</span>name<span class="string">': '</span>img3<span class="string">',</span></span><br><span class="line"><span class="string">    '</span>imgUrl<span class="string">': '</span>./img3.jpg<span class="string">',</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">];</span></span><br><span class="line"><span class="string">arr.map(x =&gt; &#123;return x.imgUrl&#125;) // 生成数组</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;/2019/04/10/test1122/test.png&quot; alt=&quot;test&quot;&gt;&lt;/p&gt;
-
+        &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span 
       
     
     </summary>
     
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
-    <title>test11</title>
-    <link href="http://yoursite.com/2019/04/10/test11/"/>
-    <id>http://yoursite.com/2019/04/10/test11/</id>
-    <published>2019-04-10T11:34:16.000Z</published>
-    <updated>2019-04-10T11:34:16.530Z</updated>
+    <title>解决div中嵌套元素时，二者点击事件同时触发</title>
+    <link href="http://yoursite.com/2019/04/12/%E8%A7%A3%E5%86%B3div%E4%B8%AD%E5%B5%8C%E5%A5%97%E5%85%83%E7%B4%A0%E6%97%B6%EF%BC%8C%E4%BA%8C%E8%80%85%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6%E5%90%8C%E6%97%B6%E8%A7%A6%E5%8F%91/"/>
+    <id>http://yoursite.com/2019/04/12/解决div中嵌套元素时，二者点击事件同时触发/</id>
+    <published>2019-04-12T12:57:57.000Z</published>
+    <updated>2019-04-12T13:01:29.627Z</updated>
+    
+    <content type="html"><![CDATA[<p>阻止JS冒泡事件~</p><p>以Angualr为例：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"previewImg"</span> (<span class="attr">click</span>)=<span class="string">"closeImg()"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"leftArrow"</span> *<span class="attr">ngIf</span>=<span class="string">"mid &gt; left"</span> (<span class="attr">click</span>)=<span class="string">"leftImg($event)"</span> <span class="attr">src</span>=<span class="string">"../../../assets/community/leftArrow@3x.png"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"pre"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;imageUrl&#125;&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"rightArrow"</span> *<span class="attr">ngIf</span>=<span class="string">"mid &lt; right"</span> (<span class="attr">click</span>)=<span class="string">"rightImg($event)"</span> <span class="attr">src</span>=<span class="string">"../../../assets/community/rightArrow@3x.png"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>点击left或right时同时会触发外层的closeImg()事件，此时需阻止JS的冒泡事件。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">closeImg() &#123;</span><br><span class="line">    <span class="keyword">this</span>.imageUrl = <span class="string">''</span>;</span><br><span class="line">&#125;</span><br><span class="line">leftImg(e) &#123;</span><br><span class="line">    alert(<span class="string">'left!'</span>);</span><br><span class="line">    e.stopPropagation();</span><br><span class="line">&#125;</span><br><span class="line">rightImg(e) &#123;</span><br><span class="line">    alert(<span class="string">'right!'</span>)</span><br><span class="line">    e.stopPropagation();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;阻止JS冒泡事件~&lt;/p&gt;
+&lt;p&gt;以Angualr为例：&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;previewImg&quot;&lt;/span&gt; (&lt;span class=&quot;attr&quot;&gt;click&lt;/span&gt;)=&lt;span class=&quot;string&quot;&gt;&quot;closeImg()&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;leftArrow&quot;&lt;/span&gt; *&lt;span class=&quot;attr&quot;&gt;ngIf&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;mid &amp;gt; left&quot;&lt;/span&gt; (&lt;span class=&quot;attr&quot;&gt;click&lt;/span&gt;)=&lt;span class=&quot;string&quot;&gt;&quot;leftImg($event)&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;../../../assets/community/leftArrow@3x.png&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;pre&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;&amp;#123;&amp;#123;imageUrl&amp;#125;&amp;#125;&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;rightArrow&quot;&lt;/span&gt; *&lt;span class=&quot;attr&quot;&gt;ngIf&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;mid &amp;lt; right&quot;&lt;/span&gt; (&lt;span class=&quot;attr&quot;&gt;click&lt;/span&gt;)=&lt;span class=&quot;string&quot;&gt;&quot;rightImg($event)&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;../../../assets/community/rightArrow@3x.png&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;div&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
     </summary>
     
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2019/04/10/test-1/"/>
-    <id>http://yoursite.com/2019/04/10/test-1/</id>
-    <published>2019-04-10T11:33:12.000Z</published>
-    <updated>2019-04-10T11:33:12.086Z</updated>
+    <title>安卓手机端网页，开启输入法时页面内容被压缩的解决方法</title>
+    <link href="http://yoursite.com/2019/04/12/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E7%AB%AF%E7%BD%91%E9%A1%B5%EF%BC%8C%E5%BC%80%E5%90%AF%E8%BE%93%E5%85%A5%E6%B3%95%E6%97%B6%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E8%A2%AB%E5%8E%8B%E7%BC%A9%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/04/12/安卓手机端网页，开启输入法时页面内容被压缩的解决方法/</id>
+    <published>2019-04-12T12:53:56.000Z</published>
+    <updated>2019-04-12T12:56:37.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>在安卓手机端的网页中，打开输入框会使页面的整体内容压缩（可能因为我使用了百分比的布局）<br>而在iphone浏览网页时则不会出现这种问题。<br>对于这种情况需要添加部分js代码来防止页面的压缩。<br><a id="more"></a></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> h1 = $(<span class="string">'body'</span>).height();</span><br><span class="line"><span class="keyword">var</span> h2 = $(<span class="string">'#upMenu'</span>).height();</span><br><span class="line"><span class="keyword">var</span> h3 = $(<span class="string">'#main'</span>).height();</span><br><span class="line">$(<span class="built_in">window</span>).resize(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">'body'</span>).height(h1);</span><br><span class="line">    $(<span class="string">'#upMenu'</span>).height(h2);</span><br><span class="line">    $(<span class="string">'#main'</span>).height(h3);</span><br><span class="line">    $(<span class="string">'#main'</span>).css(<span class="string">'top'</span>, h2);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>我的页面是由upmenu和main两部分构成。<br>具体原理是当浏览器窗口大小发生变化时调用函数$(window).resize，让输入法打开后的页面的body高度等于输入法打开前的页面的body高度，<br>其他页面中的元素根据其定位方式去设置height或top、margin-top等样式即可。</p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;在安卓手机端的网页中，打开输入框会使页面的整体内容压缩（可能因为我使用了百分比的布局）&lt;br&gt;而在iphone浏览网页时则不会出现这种问题。&lt;br&gt;对于这种情况需要添加部分js代码来防止页面的压缩。&lt;br&gt;&lt;/p&gt;
+    
     </summary>
     
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
-    <title>测试</title>
-    <link href="http://yoursite.com/2019/04/10/test/"/>
-    <id>http://yoursite.com/2019/04/10/test/</id>
-    <published>2019-04-10T07:23:56.591Z</published>
-    <updated>2019-04-10T07:24:27.547Z</updated>
+    <title>手机端网页图片之间出现白线的解决方法</title>
+    <link href="http://yoursite.com/2019/04/12/%E6%89%8B%E6%9C%BA%E7%AB%AF%E7%BD%91%E9%A1%B5%E5%9B%BE%E7%89%87%E4%B9%8B%E9%97%B4%E5%87%BA%E7%8E%B0%E7%99%BD%E7%BA%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/04/12/手机端网页图片之间出现白线的解决方法/</id>
+    <published>2019-04-12T12:45:32.000Z</published>
+    <updated>2019-04-12T12:52:50.502Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>哈哈哈哈哈哈哈哈哈哈哈哈<br><a id="more"></a><br>啊啊啊啊啊啊啊啊啊啊</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;哈哈哈哈哈哈哈哈哈哈哈哈&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2019/04/10/hello-world/"/>
-    <id>http://yoursite.com/2019/04/10/hello-world/</id>
-    <published>2019-04-10T03:17:51.790Z</published>
-    <updated>2019-04-10T07:23:10.655Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>我开发的实际情况是一个纵向的图片的列表，每个img由div包裹，在手机段访问是图片之间会出现一条白线。<br>原因是：img默认是内联模块，需要将其设置为display: block;<br>当然div之间也不要有margin~<br><a id="more"></a><br> 如图为修改后的情况（修改前的情况找不到了<em>(:з)∠)</em>）</p><p> <img src="/2019/04/12/手机端网页图片之间出现白线的解决方法/imgBlock.png" alt="imgBlock"></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;我开发的实际情况是一个纵向的图片的列表，每个img由div包裹，在手机段访问是图片之间会出现一条白线。&lt;br&gt;原因是：img默认是内联模块，需要将其设置为display: block;&lt;br&gt;当然div之间也不要有margin~&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
-      <category term="学习笔记" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
     
     
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
