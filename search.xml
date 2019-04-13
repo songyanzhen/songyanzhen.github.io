@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js奇奇怪怪的函数整理（不定时更新）（转载+整理）]]></title>
+    <url>%2F2019%2F04%2F13%2Fjs%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E7%9A%84%E5%87%BD%E6%95%B0%E6%95%B4%E7%90%86%EF%BC%88%E4%B8%8D%E5%AE%9A%E6%97%B6%E6%9B%B4%E6%96%B0%EF%BC%89%EF%BC%88%E8%BD%AC%E8%BD%BD%2B%E6%95%B4%E7%90%86%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[刷题或者开发中总会看到别人用过很多看起来特别高大上的函数方法（可能是我水平不够），这篇文章用来整理每次遇到的js函数，不定时更新，文中已标注转载位置。 1.数组相关的函数1.1.some()和every()every()与some()方法都是JS中数组的迭代方法。some()是对数组中每一项运行给定函数，如果该函数对任一项返回true，则返回true。every()是对数组中每一项运行给定函数，如果该函数对每一项返回true,则返回true。some一直在找符合条件的值，一旦找到，则不会继续迭代下去。every从迭代开始，一旦有一个不符合条件，则不会继续迭代下去。 123456789var arr = [ 1, 2, 3, 4, 5, 6 ]; console.log( arr.some(( item, index, array )=&gt;&#123; console.log( 'item=' + item + ',index='+index+',array='+array ); return item &gt; 3; &#125;)); console.log( arr.every(( item, index, array )=&gt;&#123; console.log( 'item=' + item + ',index='+index+',array='+array ); return item &gt; 3; &#125;)); 运行结果转自：https://blog.csdn.net/zhangjing0320/article/details/80677129]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>前端基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js从数组中的对象取出特定字段并生成新的数组]]></title>
     <url>%2F2019%2F04%2F12%2Fjs%E4%BB%8E%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%AF%B9%E8%B1%A1%E5%8F%96%E5%87%BA%E7%89%B9%E5%AE%9A%E5%AD%97%E6%AE%B5%E5%B9%B6%E7%94%9F%E6%88%90%E6%96%B0%E7%9A%84%E6%95%B0%E7%BB%84%2F</url>
     <content type="text"><![CDATA[123456789101112131415161718var arr = [ &#123; 'id': '1', 'name': 'img1', 'imgUrl': './img1.jpg', &#125;, &#123; 'id': '2', 'name: 'img2', 'imgUrl': './img2.jpg', &#125;, &#123; 'id': '3', 'name': 'img3', 'imgUrl': './img3.jpg', &#125;];arr.map(x =&gt; &#123;return x.imgUrl&#125;) // 生成数组]]></content>
