@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="在安卓手机端的网页中，打开输入框会使页面的整体内容压缩（可能因为我使用了百分比的布局）而在iphone浏览网页时则不会出现这种问题。对于这种情况需要添加部分js代码来防止页面的压缩。">
+  <meta name="description" content="接上一篇笔记，了解常用自定义Hooks的写法，能够手写简单Hook。 后续有常用的hook会整理在这里。 参考文章：https://blog.csdn.net/KlausLily/article/details/104586371">
 <meta name="keywords" content="前端基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安卓手机端网页，开启输入法时页面内容被压缩的解决方法">
-<meta property="og:url" content="http://yoursite.com/2019/04/12/安卓手机端网页，开启输入法时页面内容被压缩的解决方法/index.html">
+<meta property="og:title" content="自定义React Hooks">
+<meta property="og:url" content="http://yoursite.com/2020/06/24/自定义React Hooks/index.html">
 <meta property="og:site_name" content="乐观的阿珍">
-<meta property="og:description" content="在安卓手机端的网页中，打开输入框会使页面的整体内容压缩（可能因为我使用了百分比的布局）而在iphone浏览网页时则不会出现这种问题。对于这种情况需要添加部分js代码来防止页面的压缩。">
+<meta property="og:description" content="接上一篇笔记，了解常用自定义Hooks的写法，能够手写简单Hook。 后续有常用的hook会整理在这里。 参考文章：https://blog.csdn.net/KlausLily/article/details/104586371">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-12T12:56:37.267Z">
+<meta property="og:updated_time" content="2020-06-24T09:33:06.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安卓手机端网页，开启输入法时页面内容被压缩的解决方法">
-<meta name="twitter:description" content="在安卓手机端的网页中，打开输入框会使页面的整体内容压缩（可能因为我使用了百分比的布局）而在iphone浏览网页时则不会出现这种问题。对于这种情况需要添加部分js代码来防止页面的压缩。">
+<meta name="twitter:title" content="自定义React Hooks">
+<meta name="twitter:description" content="接上一篇笔记，了解常用自定义Hooks的写法，能够手写简单Hook。 后续有常用的hook会整理在这里。 参考文章：https://blog.csdn.net/KlausLily/article/details/104586371">
 
 
 
@@ -117,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/12/安卓手机端网页，开启输入法时页面内容被压缩的解决方法/">
+  <link rel="canonical" href="http://yoursite.com/2020/06/24/自定义React Hooks/">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>安卓手机端网页，开启输入法时页面内容被压缩的解决方法 | 乐观的阿珍</title>
+  <title>自定义React Hooks | 乐观的阿珍</title>
   
 
 
@@ -376,7 +376,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/安卓手机端网页，开启输入法时页面内容被压缩的解决方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/24/自定义React Hooks/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hain Song">
@@ -393,7 +393,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">安卓手机端网页，开启输入法时页面内容被压缩的解决方法
+          <h1 class="post-title" itemprop="name headline">自定义React Hooks
 
               
             
@@ -419,7 +419,7 @@
                 
               
 
-              <time title="Created: 2019-04-12 20:53:56 / Modified: 20:56:37" itemprop="dateCreated datePublished" datetime="2019-04-12T20:53:56+08:00">2019-04-12</time>
+              <time title="Created: 2020-06-24 16:49:28 / Modified: 17:33:06" itemprop="dateCreated datePublished" datetime="2020-06-24T16:49:28+08:00">2020-06-24</time>
             
 
             
@@ -441,7 +441,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
 
                 
                 
@@ -483,10 +483,16 @@
       
 
       
-        <p>在安卓手机端的网页中，打开输入框会使页面的整体内容压缩（可能因为我使用了百分比的布局）<br>而在iphone浏览网页时则不会出现这种问题。<br>对于这种情况需要添加部分js代码来防止页面的压缩。<br><a id="more"></a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> h1 = $(<span class="string">'body'</span>).height();</span><br><span class="line"><span class="keyword">var</span> h2 = $(<span class="string">'#upMenu'</span>).height();</span><br><span class="line"><span class="keyword">var</span> h3 = $(<span class="string">'#main'</span>).height();</span><br><span class="line">$(<span class="built_in">window</span>).resize(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">'body'</span>).height(h1);</span><br><span class="line">    $(<span class="string">'#upMenu'</span>).height(h2);</span><br><span class="line">    $(<span class="string">'#main'</span>).height(h3);</span><br><span class="line">    $(<span class="string">'#main'</span>).css(<span class="string">'top'</span>, h2);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>我的页面是由upmenu和main两部分构成。<br>具体原理是当浏览器窗口大小发生变化时调用函数$(window).resize，让输入法打开后的页面的body高度等于输入法打开前的页面的body高度，<br>其他页面中的元素根据其定位方式去设置height或top、margin-top等样式即可。</p>
-
+        <p>接上一篇笔记，了解常用自定义Hooks的写法，能够手写简单Hook。</p>
+<p>后续有常用的hook会整理在这里。</p>
+<p>参考文章：<a href="https://blog.csdn.net/KlausLily/article/details/104586371" target="_blank" rel="noopener">https://blog.csdn.net/KlausLily/article/details/104586371</a></p>
+<a id="more"></a>
+<h2 id="1-自定义useState-？"><a href="#1-自定义useState-？" class="headerlink" title="1.自定义useState ？"></a>1.自定义useState ？</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useEffect, useRef, useState &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> useXState = <span class="function">(<span class="params">initState</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [state, setState] = useState(initState)</span><br><span class="line">    <span class="keyword">let</span> isUpdate = useRef()</span><br><span class="line">	<span class="comment">// cb 回调赋值函数？ - callback</span></span><br><span class="line">    <span class="keyword">const</span> setXState = <span class="function">(<span class="params">state, cb</span>) =&gt;</span> &#123;</span><br><span class="line">      setState(<span class="function"><span class="params">prev</span> =&gt;</span> &#123;</span><br><span class="line">        isUpdate.current = cb</span><br><span class="line">		<span class="comment">// setState可能传值setCount(count+1)或者函数setCount(prevCount =&gt; prevCount+1)，返回新值</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">typeof</span> state === <span class="string">'function'</span> ? state(prev) : state</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(isUpdate.current) &#123;</span><br><span class="line">		<span class="comment">// 手动调用回调赋值函数</span></span><br><span class="line">        isUpdate.current()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> [state, setXState]</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> useXState</span><br></pre></td></tr></table></figure>
+<p>利用useRef的特性来作为标识区分是挂载还是更新，当执行setXstate时，会传入和setState一模一样的参数，并且将回调赋值给useRef的current属性，这样在更新完成时，我们手动调用current即可实现更新后的回调这一功能。<br>迷惑：cb是哪来的？？？在日志中打印cb是个undefined？？？？</p>
+<h2 id="2-useThrottle-amp-useDebounce"><a href="#2-useThrottle-amp-useDebounce" class="headerlink" title="2.useThrottle &amp; useDebounce"></a>2.useThrottle &amp; useDebounce</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 节流</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">func, ms</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> previous = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> now = <span class="built_in">Date</span>.now();</span><br><span class="line">        <span class="keyword">let</span> context = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">let</span> args = <span class="built_in">arguments</span>;</span><br><span class="line">        <span class="keyword">if</span> (now - previous &gt; ms) &#123;</span><br><span class="line">            func.apply(context, args);</span><br><span class="line">            previous = now;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// useThrottle 回调函数 时间间隔 依赖项数组</span></span><br><span class="line"><span class="keyword">const</span> useThrottle = <span class="function">(<span class="params">fn, ms = <span class="number">30</span>, deps = []</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> previous = useRef(<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">let</span> [time, setTime] = useState(ms)</span><br><span class="line">    useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> now = <span class="built_in">Date</span>.now();</span><br><span class="line">        <span class="keyword">if</span> (now - previous.current &gt; time) &#123;</span><br><span class="line">            fn();</span><br><span class="line">            previous.current = now;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, deps)</span><br><span class="line">	<span class="comment">// 取消节流，可以忽略</span></span><br><span class="line">    <span class="keyword">const</span> cancel = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        setTime(<span class="number">0</span>)</span><br><span class="line">    &#125;v</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> [cancel]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 节流setB，cancel为取消函数</span></span><br><span class="line"><span class="keyword">const</span> [cancel] = useThrottle(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setB(a)</span><br><span class="line">  &#125;, <span class="number">2000</span>, [a])</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 防抖</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">func, ms</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> context = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">let</span> args = <span class="built_in">arguments</span>;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">if</span> (timeout) clearTimeout(timeout);</span><br><span class="line">        </span><br><span class="line">        timeout = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            func.apply(context, args)</span><br><span class="line">        &#125;, ms);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// useDebounce</span></span><br><span class="line"><span class="keyword">const</span> useDebounce = <span class="function">(<span class="params">fn, ms = <span class="number">30</span>, deps = []</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> timeout = useRef()</span><br><span class="line">    useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (timeout.current) clearTimeout(timeout.current)</span><br><span class="line">        timeout.current = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            fn()</span><br><span class="line">        &#125;, ms)</span><br><span class="line">    &#125;, deps)</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">const</span> cancel = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        clearTimeout(timeout.current)</span><br><span class="line">        timeout = <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> [cancel]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 防抖setB，cancel为取消函数</span></span><br><span class="line"><span class="keyword">const</span> [cancel] = useDebounce(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setB(a)</span><br><span class="line">  &#125;, <span class="number">2000</span>, [a])</span><br></pre></td></tr></table></figure>
+<h2 id="n-useInitRender"><a href="#n-useInitRender" class="headerlink" title="n.useInitRender"></a>n.useInitRender</h2><p>在当前参与开发的React-Native项目中，会有部分页面在刚进入时直接请求数据，会导致渲染和请求同步进行 =&gt; 部分机型上会卡顿，为了简化操作，自定义了一个简易的UseInitRender Hook。用来代替RN中进入页面即请求数据的useEffect。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">interface InitRenderProp &#123;</span><br><span class="line">  request?: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">void</span>; <span class="comment">// 请求函数</span></span><br><span class="line">  action?: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">void</span>; <span class="comment">// 普通函数逻辑</span></span><br><span class="line">  willFocus?: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">void</span>; <span class="comment">// 监听函数（返回该页面时会调用，例如重新刷新数据） </span></span><br><span class="line">  didFocus?: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">void</span>; <span class="comment">// 监听函数（返回该页面时会调用，例如重新刷新数据） </span></span><br><span class="line">  navigation?: NavigationScreenProp&lt; <span class="comment">// 用于添加监听</span></span><br><span class="line">    NavigationRoute&lt;NavigationParams&gt;,</span><br><span class="line">    NavigationParams</span><br><span class="line">  &gt;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useInitRender = (props: InitRenderProp): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; request, action, willFocus, didFocus, navigation &#125; = props;</span><br><span class="line"></span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span>: <span class="params">void</span> | (<span class="params">(</span>) =&gt;</span> <span class="keyword">void</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (request) &#123;</span><br><span class="line">	  <span class="comment">// 期望首次render完成之后再请求数据</span></span><br><span class="line">      setTimeout((): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">        request();</span><br><span class="line">      &#125;, <span class="number">200</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (action) &#123;</span><br><span class="line">      action();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> willFocusSubscription: NavigationEventSubscription | <span class="literal">null</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">let</span> didFocusSubscription: NavigationEventSubscription | <span class="literal">null</span> = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (willFocus &amp;&amp; navigation) &#123;</span><br><span class="line">      willFocusSubscription = navigation.addListener(<span class="string">'willFocus'</span>, (): <span class="function"><span class="params">void</span> =&gt;</span></span><br><span class="line">        willFocus()</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (didFocus &amp;&amp; navigation) &#123;</span><br><span class="line">      didFocusSubscription = navigation.addListener(<span class="string">'didFocus'</span>, (): <span class="function"><span class="params">void</span> =&gt;</span></span><br><span class="line">        didFocus()</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (willFocusSubscription) &#123;</span><br><span class="line">        willFocusSubscription.remove();</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (didFocusSubscription) &#123;</span><br><span class="line">        didFocusSubscription.remove();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, []);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -522,8 +528,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/12/手机端网页图片之间出现白线的解决方法/" rel="next" title="手机端网页图片之间出现白线的解决方法">
-                <i class="fa fa-chevron-left"></i> 手机端网页图片之间出现白线的解决方法
+              <a href="/2020/06/22/React Hooks记录/" rel="next" title="React Hooks记录">
+                <i class="fa fa-chevron-left"></i> React Hooks记录
               </a>
             
           </div>
@@ -531,10 +537,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/12/解决div中嵌套元素时，二者点击事件同时触发/" rel="prev" title="解决div中嵌套元素时，二者点击事件同时触发">
-                解决div中嵌套元素时，二者点击事件同时触发 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -578,8 +580,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -703,6 +714,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-自定义useState-？"><span class="nav-text">1.自定义useState ？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-useThrottle-amp-useDebounce"><span class="nav-text">2.useThrottle &amp; useDebounce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n-useInitRender"><span class="nav-text">n.useInitRender</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
