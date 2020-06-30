@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[小程序navigateTo传参被截断]]></title>
+    <url>%2F2020%2F06%2F30%2F%E5%B0%8F%E7%A8%8B%E5%BA%8FnavigateTo%E4%BC%A0%E5%8F%82%E8%A2%AB%E6%88%AA%E6%96%AD%2F</url>
+    <content type="text"><![CDATA[背景：最近在开发公司的小程序项目，为了方便采用了直接嵌入webview的方式开发，其中支付流程需要从webview跳转到小程序内完成。h5调用下单接口后会通过wx.miniProgram.navigateTo跳转到小程序页面进行支付操作。此时会以query的方式携带大量的参数，而直接将这些参数传递的话，会在小程序的onLoad里发现query被截断了。 解决方法：需要将参数进行编码后再传递。似乎其他通过query传参的场景也适用。 123456789h5：wx.navigateTo(&#123; url: '/pages/pay/index?payData=' + encodeURIComponent(payData)&#125;);小程序：onLoad: function (query) &#123; var url = decodeURIComponent(query.payData);&#125;]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>前端踩坑</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[自定义React Hooks]]></title>
     <url>%2F2020%2F06%2F24%2F%E8%87%AA%E5%AE%9A%E4%B9%89React%20Hooks%2F</url>
     <content type="text"><![CDATA[接上一篇笔记，了解常用自定义Hooks的写法，能够手写简单Hook。 后续有常用的hook会整理在这里。 参考文章：https://blog.csdn.net/KlausLily/article/details/104586371 1.自定义useState ？123456789101112131415161718192021222324import &#123; useEffect, useRef, useState &#125; from 'react' const useXState = (initState) =&gt; &#123; const [state, setState] = useState(initState) let isUpdate = useRef() // cb 回调赋值函数？ - callback const setXState = (state, cb) =&gt; &#123; setState(prev =&gt; &#123; isUpdate.current = cb // setState可能传值setCount(count+1)或者函数setCount(prevCount =&gt; prevCount+1)，返回新值 return typeof state === 'function' ? state(prev) : state &#125;) &#125; useEffect(() =&gt; &#123; if(isUpdate.current) &#123; // 手动调用回调赋值函数 isUpdate.current() &#125; &#125;) return [state, setXState] &#125; export default useXState 利用useRef的特性来作为标识区分是挂载还是更新，当执行setXstate时，会传入和setState一模一样的参数，并且将回调赋值给useRef的current属性，这样在更新完成时，我们手动调用current即可实现更新后的回调这一功能。迷惑：cb是哪来的？？？在日志中打印cb是个undefined？？？？ 2.useThrottle &amp; useDebounce12345678910111213141516171819202122232425262728293031323334353637// 节流function throttle(func, ms) &#123; let previous = 0; return function() &#123; let now = Date.now(); let context = this; let args = arguments; if (now - previous &gt; ms) &#123; func.apply(context, args); previous = now; &#125; &#125;&#125;// useThrottle 回调函数 时间间隔 依赖项数组const useThrottle = (fn, ms = 30, deps = []) =&gt; &#123; let previous = useRef(0) let [time, setTime] = useState(ms) useEffect(() =&gt; &#123; let now = Date.now(); if (now - previous.current &gt; time) &#123; fn(); previous.current = now; &#125; &#125;, deps) // 取消节流，可以忽略 const cancel = () =&gt; &#123; setTime(0) &#125;v return [cancel]&#125;// 节流setB，cancel为取消函数const [cancel] = useThrottle(() =&gt; &#123; setB(a) &#125;, 2000, [a]) 12345678910111213141516171819202122232425262728293031323334353637// 防抖function debounce(func, ms) &#123; let timeout; return function () &#123; let context = this; let args = arguments; if (timeout) clearTimeout(timeout); timeout = setTimeout(() =&gt; &#123; func.apply(context, args) &#125;, ms); &#125;&#125;// useDebounceconst useDebounce = (fn, ms = 30, deps = []) =&gt; &#123; let timeout = useRef() useEffect(() =&gt; &#123; if (timeout.current) clearTimeout(timeout.current) timeout.current = setTimeout(() =&gt; &#123; fn() &#125;, ms) &#125;, deps) const cancel = () =&gt; &#123; clearTimeout(timeout.current) timeout = null &#125; return [cancel]&#125;// 防抖setB，cancel为取消函数const [cancel] = useDebounce(() =&gt; &#123; setB(a) &#125;, 2000, [a]) n.useInitRender在当前参与开发的React-Native项目中，会有部分页面在刚进入时直接请求数据，会导致渲染和请求同步进行 =&gt; 部分机型上会卡顿，为了简化操作，自定义了一个简易的UseInitRender Hook。用来代替RN中进入页面即请求数据的useEffect。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950interface InitRenderProp &#123; request?: () =&gt; void; // 请求函数 action?: () =&gt; void; // 普通函数逻辑 willFocus?: () =&gt; void; // 监听函数（返回该页面时会调用，例如重新刷新数据） didFocus?: () =&gt; void; // 监听函数（返回该页面时会调用，例如重新刷新数据） navigation?: NavigationScreenProp&lt; // 用于添加监听 NavigationRoute&lt;NavigationParams&gt;, NavigationParams &gt;;&#125;export const useInitRender = (props: InitRenderProp): void =&gt; &#123; const &#123; request, action, willFocus, didFocus, navigation &#125; = props; useEffect((): void | (() =&gt; void) =&gt; &#123; if (request) &#123; // 期望首次render完成之后再请求数据 setTimeout((): void =&gt; &#123; request(); &#125;, 200); &#125; if (action) &#123; action(); &#125; let willFocusSubscription: NavigationEventSubscription | null = null; let didFocusSubscription: NavigationEventSubscription | null = null; if (willFocus &amp;&amp; navigation) &#123; willFocusSubscription = navigation.addListener('willFocus', (): void =&gt; willFocus() ); &#125; if (didFocus &amp;&amp; navigation) &#123; didFocusSubscription = navigation.addListener('didFocus', (): void =&gt; didFocus() ); &#125; return (): void =&gt; &#123; if (willFocusSubscription) &#123; willFocusSubscription.remove(); &#125; if (didFocusSubscription) &#123; didFocusSubscription.remove(); &#125; &#125;; &#125;, []);&#125;;]]></content>
@@ -20,17 +31,6 @@
       </categories>
       <tags>
         <tag>前端基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[小程序navigateTo传参被截断]]></title>
-    <url>%2F2019%2F06%2F30%2F%E5%B0%8F%E7%A8%8B%E5%BA%8FnavigateTo%E4%BC%A0%E5%8F%82%E8%A2%AB%E6%88%AA%E6%96%AD%2F</url>
-    <content type="text"><![CDATA[背景：最近在开发公司的小程序项目，为了方便采用了直接嵌入webview的方式开发，其中支付流程需要从webview跳转到小程序内完成。h5调用下单接口后会通过wx.miniProgram.navigateTo跳转到小程序页面进行支付操作。此时会以query的方式携带大量的参数，而直接将这些参数传递的话，会在小程序的onLoad里发现query被截断了。 解决方法：需要将参数进行编码后再传递。似乎其他通过query传参的场景也适用。 123456789h5：wx.navigateTo(&#123; url: '/pages/pay/index?payData=' + encodeURIComponent(payData)&#125;);小程序：onLoad: function (query) &#123; var url = decodeURIComponent(query.payData);&#125;]]></content>
-      <categories>
-        <category>小程序</category>
-      </categories>
-      <tags>
-        <tag>前端踩坑</tag>
       </tags>
   </entry>
   <entry>

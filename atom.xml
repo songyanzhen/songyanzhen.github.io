@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-24T09:33:06.851Z</updated>
+  <updated>2020-06-30T03:05:38.399Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小程序navigateTo传参被截断</title>
+    <link href="http://yoursite.com/2020/06/30/%E5%B0%8F%E7%A8%8B%E5%BA%8FnavigateTo%E4%BC%A0%E5%8F%82%E8%A2%AB%E6%88%AA%E6%96%AD/"/>
+    <id>http://yoursite.com/2020/06/30/小程序navigateTo传参被截断/</id>
+    <published>2020-06-30T02:51:39.000Z</published>
+    <updated>2020-06-30T03:05:38.399Z</updated>
+    
+    <content type="html"><![CDATA[<p>背景：最近在开发公司的小程序项目，为了方便采用了直接嵌入webview的方式开发，其中支付流程需要从webview跳转到小程序内完成。<br>h5调用下单接口后会通过wx.miniProgram.navigateTo跳转到小程序页面进行支付操作。<br>此时会以query的方式携带大量的参数，而直接将这些参数传递的话，会在小程序的onLoad里发现query被截断了。</p><a id="more"></a><p>解决方法：需要将参数进行编码后再传递。<br>似乎其他通过query传参的场景也适用。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">h5：</span><br><span class="line">wx.navigateTo(&#123;</span><br><span class="line">    url: <span class="string">'/pages/pay/index?payData='</span> + <span class="built_in">encodeURIComponent</span>(payData)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">小程序：</span><br><span class="line">onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">query</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> url = <span class="built_in">decodeURIComponent</span>(query.payData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;背景：最近在开发公司的小程序项目，为了方便采用了直接嵌入webview的方式开发，其中支付流程需要从webview跳转到小程序内完成。&lt;br&gt;h5调用下单接口后会通过wx.miniProgram.navigateTo跳转到小程序页面进行支付操作。&lt;br&gt;此时会以query的方式携带大量的参数，而直接将这些参数传递的话，会在小程序的onLoad里发现query被截断了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="小程序" scheme="http://yoursite.com/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="前端踩坑" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义React Hooks</title>
@@ -61,28 +83,6 @@
     
     
       <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小程序navigateTo传参被截断</title>
-    <link href="http://yoursite.com/2019/06/30/%E5%B0%8F%E7%A8%8B%E5%BA%8FnavigateTo%E4%BC%A0%E5%8F%82%E8%A2%AB%E6%88%AA%E6%96%AD/"/>
-    <id>http://yoursite.com/2019/06/30/小程序navigateTo传参被截断/</id>
-    <published>2019-06-30T02:51:39.000Z</published>
-    <updated>2020-06-30T02:58:32.200Z</updated>
-    
-    <content type="html"><![CDATA[<p>背景：最近在开发公司的小程序项目，为了方便采用了直接嵌入webview的方式开发，其中支付流程需要从webview跳转到小程序内完成。<br>h5调用下单接口后会通过wx.miniProgram.navigateTo跳转到小程序页面进行支付操作。<br>此时会以query的方式携带大量的参数，而直接将这些参数传递的话，会在小程序的onLoad里发现query被截断了。</p><a id="more"></a><p>解决方法：需要将参数进行编码后再传递。<br>似乎其他通过query传参的场景也适用。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">h5：</span><br><span class="line">wx.navigateTo(&#123;</span><br><span class="line">    url: <span class="string">'/pages/pay/index?payData='</span> + <span class="built_in">encodeURIComponent</span>(payData)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">小程序：</span><br><span class="line">onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">query</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> url = <span class="built_in">decodeURIComponent</span>(query.payData);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;背景：最近在开发公司的小程序项目，为了方便采用了直接嵌入webview的方式开发，其中支付流程需要从webview跳转到小程序内完成。&lt;br&gt;h5调用下单接口后会通过wx.miniProgram.navigateTo跳转到小程序页面进行支付操作。&lt;br&gt;此时会以query的方式携带大量的参数，而直接将这些参数传递的话，会在小程序的onLoad里发现query被截断了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="小程序" scheme="http://yoursite.com/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-      <category term="前端踩坑" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
