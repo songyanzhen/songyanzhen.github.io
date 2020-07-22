@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[React Native视频缓存解决方案]]></title>
+    <url>%2F2020%2F07%2F15%2FReact%20Native%E8%A7%86%E9%A2%91%E7%BC%93%E5%AD%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
+    <content type="text"><![CDATA[憨憨最近接了个需求，要实现视频缓存功能，经历了三天的踩坑，于是有了这篇文章。 由于是React-Native的项目，对于文件相关的操作采用了react-native-fs。如果是其他项目，整体思路基本没有变动，可能会需要使用js来操作文件。 参考文章：https://www.jianshu.com/p/e97f6555a070 m3u8格式详解https://github.com/itinance/react-native-fs react-native-fs用法 First of All，理解m3u8的缓存过程 下载m3u8文件到本地，并记录m3u8所在的服务器地址（后续下载ts文件会用到） 读取m3u8文件，遍历每一行找出ts文件列表（tsList）和密钥key的下载地址（keyUrl） 遍历下载ts文件，如有失败，则重试 下载密钥文件，再次读取m3u8文件，并将其中的keyUrl替换成本地密钥文件的路径（相对路径即可） 此时播放m3u8文件，会直接从本地获取密钥去解密视频进行播放。PS：m3u8、ts文件、密钥文件建议在同一个目路下 最终生成m3u8文件格式如下：#EXTM3U#EXT-X-VERSION:3#EXT-X-ALLOW-CACHE:YES#EXT-X-TARGETDURATION:18#EXT-X-MEDIA-SEQUENCE:0#EXT-X-KEY:METHOD=AES-128,URI=&quot;hd.key&quot;#EXTINF:17.360000,hd-00001.ts#EXTINF:10.000000,hd-00002.ts 目录如下：hd.m3u8，hd00001.ts，hd00002.ts，…，hd.key 具体流程如下： 总体设计前提：当前需求仅支持一个正在进行的下载任务。一开始计划是分成三个模块：视频缓存类 + 视频缓存管理 + 视频缓存列表的本地缓存管理；随着开发的进行，发现三个模块并不能满足开发需求（可能是菜），于是最终采用了四个模块的方案。总体设计图如下：]]></content>
+      <categories>
+        <category>React Native</category>
+      </categories>
+      <tags>
+        <tag>解决方案</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[小程序navigateTo传参被截断]]></title>
     <url>%2F2020%2F06%2F30%2F%E5%B0%8F%E7%A8%8B%E5%BA%8FnavigateTo%E4%BC%A0%E5%8F%82%E8%A2%AB%E6%88%AA%E6%96%AD%2F</url>
     <content type="text"><![CDATA[背景：最近在开发公司的小程序项目，为了方便采用了直接嵌入webview的方式开发，其中支付流程需要从webview跳转到小程序内完成。h5调用下单接口后会通过wx.miniProgram.navigateTo跳转到小程序页面进行支付操作。此时会以query的方式携带大量的参数，而直接将这些参数传递的话，会在小程序的onLoad里发现query被截断了。 解决方法：需要将参数进行编码后再传递。似乎其他通过query传参的场景也适用。 123456789h5：wx.navigateTo(&#123; url: '/pages/pay/index?payData=' + encodeURIComponent(payData)&#125;);小程序：onLoad: function (query) &#123; var url = decodeURIComponent(query.payData);&#125;]]></content>

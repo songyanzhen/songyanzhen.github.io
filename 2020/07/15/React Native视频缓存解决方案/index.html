@@ -96,20 +96,21 @@
 
 
 
-  <meta name="description" content="我开发的实际情况是一个纵向的图片的列表，每个img由div包裹，在手机段访问是图片之间会出现一条白线。原因是：img默认是内联模块，需要将其设置为display: block;当然div之间也不要有margin~">
-<meta name="keywords" content="前端基础">
+  <meta name="description" content="憨憨最近接了个需求，要实现视频缓存功能，经历了三天的踩坑，于是有了这篇文章。 由于是React-Native的项目，对于文件相关的操作采用了react-native-fs。如果是其他项目，整体思路基本没有变动，可能会需要使用js来操作文件。 参考文章：https://www.jianshu.com/p/e97f6555a070 m3u8格式详解https://github.com/itinance">
+<meta name="keywords" content="解决方案">
 <meta property="og:type" content="article">
-<meta property="og:title" content="手机端网页图片之间出现白线的解决方法">
-<meta property="og:url" content="http://yoursite.com/2019/04/12/手机端网页图片之间出现白线的解决方法/index.html">
+<meta property="og:title" content="React Native视频缓存解决方案">
+<meta property="og:url" content="http://yoursite.com/2020/07/15/React Native视频缓存解决方案/index.html">
 <meta property="og:site_name" content="乐观的阿珍">
-<meta property="og:description" content="我开发的实际情况是一个纵向的图片的列表，每个img由div包裹，在手机段访问是图片之间会出现一条白线。原因是：img默认是内联模块，需要将其设置为display: block;当然div之间也不要有margin~">
+<meta property="og:description" content="憨憨最近接了个需求，要实现视频缓存功能，经历了三天的踩坑，于是有了这篇文章。 由于是React-Native的项目，对于文件相关的操作采用了react-native-fs。如果是其他项目，整体思路基本没有变动，可能会需要使用js来操作文件。 参考文章：https://www.jianshu.com/p/e97f6555a070 m3u8格式详解https://github.com/itinance">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2019/04/12/手机端网页图片之间出现白线的解决方法/imgBlock.png">
-<meta property="og:updated_time" content="2019-04-12T12:52:50.502Z">
+<meta property="og:image" content="http://yoursite.com/2020/07/15/React%20Native视频缓存解决方案/视频缓存流程图.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/15/React%20Native视频缓存解决方案/视频缓存总体设计.png">
+<meta property="og:updated_time" content="2020-07-15T09:50:26.589Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="手机端网页图片之间出现白线的解决方法">
-<meta name="twitter:description" content="我开发的实际情况是一个纵向的图片的列表，每个img由div包裹，在手机段访问是图片之间会出现一条白线。原因是：img默认是内联模块，需要将其设置为display: block;当然div之间也不要有margin~">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/12/手机端网页图片之间出现白线的解决方法/imgBlock.png">
+<meta name="twitter:title" content="React Native视频缓存解决方案">
+<meta name="twitter:description" content="憨憨最近接了个需求，要实现视频缓存功能，经历了三天的踩坑，于是有了这篇文章。 由于是React-Native的项目，对于文件相关的操作采用了react-native-fs。如果是其他项目，整体思路基本没有变动，可能会需要使用js来操作文件。 参考文章：https://www.jianshu.com/p/e97f6555a070 m3u8格式详解https://github.com/itinance">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/15/React%20Native视频缓存解决方案/视频缓存流程图.png">
 
 
 
@@ -119,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/04/12/手机端网页图片之间出现白线的解决方法/">
+  <link rel="canonical" href="http://yoursite.com/2020/07/15/React Native视频缓存解决方案/">
 
 
 
@@ -129,7 +130,7 @@
   };
 </script>
 
-  <title>手机端网页图片之间出现白线的解决方法 | 乐观的阿珍</title>
+  <title>React Native视频缓存解决方案 | 乐观的阿珍</title>
   
 
 
@@ -378,7 +379,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/手机端网页图片之间出现白线的解决方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/15/React Native视频缓存解决方案/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hain Song">
@@ -395,7 +396,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">手机端网页图片之间出现白线的解决方法
+          <h1 class="post-title" itemprop="name headline">React Native视频缓存解决方案
 
               
             
@@ -421,7 +422,7 @@
                 
               
 
-              <time title="Created: 2019-04-12 20:45:32 / Modified: 20:52:50" itemprop="dateCreated datePublished" datetime="2019-04-12T20:45:32+08:00">2019-04-12</time>
+              <time title="Created: 2020-07-15 16:45:08 / Modified: 17:50:26" itemprop="dateCreated datePublished" datetime="2020-07-15T16:45:08+08:00">2020-07-15</time>
             
 
             
@@ -443,7 +444,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
 
                 
                 
@@ -485,8 +486,20 @@
       
 
       
-        <p>我开发的实际情况是一个纵向的图片的列表，每个img由div包裹，在手机段访问是图片之间会出现一条白线。<br>原因是：img默认是内联模块，需要将其设置为display: block;<br>当然div之间也不要有margin~<br><a id="more"></a><br> 如图为修改后的情况（修改前的情况找不到了<em>(:з)∠)</em>）</p>
-<p> <img src="/2019/04/12/手机端网页图片之间出现白线的解决方法/imgBlock.png" alt="imgBlock"></p>
+        <p>憨憨最近接了个需求，要实现视频缓存功能，经历了三天的踩坑，于是有了这篇文章。</p>
+<p>由于是React-Native的项目，对于文件相关的操作采用了react-native-fs。如果是其他项目，整体思路基本没有变动，可能会需要使用js来操作文件。</p>
+<p>参考文章：<br><a href="https://www.jianshu.com/p/e97f6555a070" target="_blank" rel="noopener">https://www.jianshu.com/p/e97f6555a070</a> m3u8格式详解<br><a href="https://github.com/itinance/react-native-fs" target="_blank" rel="noopener">https://github.com/itinance/react-native-fs</a> react-native-fs用法<br><a id="more"></a></p>
+<h2 id="First-of-All，理解m3u8的缓存过程"><a href="#First-of-All，理解m3u8的缓存过程" class="headerlink" title="First of All，理解m3u8的缓存过程"></a>First of All，理解m3u8的缓存过程</h2><ol>
+<li>下载m3u8文件到本地，并记录m3u8所在的服务器地址（后续下载ts文件会用到）</li>
+<li>读取m3u8文件，遍历每一行找出ts文件列表（tsList）和密钥key的下载地址（keyUrl）</li>
+<li>遍历下载ts文件，如有失败，则重试</li>
+<li>下载密钥文件，再次读取m3u8文件，并将其中的keyUrl替换成本地密钥文件的路径（相对路径即可）</li>
+<li>此时播放m3u8文件，会直接从本地获取密钥去解密视频进行播放。<br><strong>PS：m3u8、ts文件、密钥文件建议在同一个目路下</strong></li>
+</ol>
+<p>最终生成m3u8文件格式如下：<br><code>#EXTM3U</code><br><code>#EXT-X-VERSION:3</code><br><code>#EXT-X-ALLOW-CACHE:YES</code><br><code>#EXT-X-TARGETDURATION:18</code><br><code>#EXT-X-MEDIA-SEQUENCE:0</code><br><code>#EXT-X-KEY:METHOD=AES-128,URI=&quot;hd.key&quot;</code><br><code>#EXTINF:17.360000,</code><br><code>hd-00001.ts</code><br><code>#EXTINF:10.000000,</code><br><code>hd-00002.ts</code></p>
+<p>目录如下：hd.m3u8，hd00001.ts，hd00002.ts，…，hd.key</p>
+<p>具体流程如下：<br><img src="/2020/07/15/React Native视频缓存解决方案/视频缓存流程图.png" alt="视频缓存流程图"></p>
+<h2 id="总体设计"><a href="#总体设计" class="headerlink" title="总体设计"></a>总体设计</h2><p>前提：当前需求仅支持一个正在进行的下载任务。<br>一开始计划是分成三个模块：视频缓存类 + 视频缓存管理 + 视频缓存列表的本地缓存管理；随着开发的进行，发现三个模块并不能满足开发需求（可能是菜），于是最终采用了四个模块的方案。<br>总体设计图如下：<br><img src="/2020/07/15/React Native视频缓存解决方案/视频缓存总体设计.png" alt="视频缓存总体设计"></p>
 
       
     </div>
@@ -510,7 +523,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端基础/" rel="tag"># 前端基础</a>
+            <a href="/tags/解决方案/" rel="tag"># 解决方案</a>
           
         </div>
       
@@ -523,15 +536,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/06/30/小程序navigateTo传参被截断/" rel="next" title="小程序navigateTo传参被截断">
+                <i class="fa fa-chevron-left"></i> 小程序navigateTo传参被截断
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/12/安卓手机端网页，开启输入法时页面内容被压缩的解决方法/" rel="prev" title="安卓手机端网页，开启输入法时页面内容被压缩的解决方法">
-                安卓手机端网页，开启输入法时页面内容被压缩的解决方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -575,8 +588,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -708,6 +730,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#First-of-All，理解m3u8的缓存过程"><span class="nav-text">First of All，理解m3u8的缓存过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总体设计"><span class="nav-text">总体设计</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
