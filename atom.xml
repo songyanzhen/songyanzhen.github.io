@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-31T08:51:52.044Z</updated>
+  <updated>2021-06-01T07:14:59.791Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jenkins凭证配置</title>
+    <link href="http://yoursite.com/2021/06/01/Jenkins%E5%87%AD%E8%AF%81%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2021/06/01/Jenkins凭证配置/</id>
+    <published>2021-06-01T07:02:32.000Z</published>
+    <updated>2021-06-01T07:14:59.791Z</updated>
+    
+    <content type="html"><![CDATA[<p>来源：git仓库切换后，jenkins上编译的配置也需要修改对应的仓库地址，此时需要配置一个新的仓库地址的凭证才能正常进行编译。<br><a id="more"></a></p><h2 id="git仓库ssh配置"><a href="#git仓库ssh配置" class="headerlink" title="git仓库ssh配置"></a>git仓库ssh配置</h2><h3 id="1-生成ssh-key"><a href="#1-生成ssh-key" class="headerlink" title="1. 生成ssh key"></a>1. 生成ssh key</h3><p>以windows为例，直接在命令行里执行，所有选项都是默认，一直回车即可生成。生成之后在.ssh文件夹下就会生成一对ssh文件。具体路径（C:\Users\${你的用户名}.ssh）<br>其中id_rsa是私钥文件，id_rsa.pub是公钥文件。<br>如果之前本地已有ssh文件则可以跳过此步骤。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@youremail.com"</span></span><br></pre></td></tr></table></figure></p><p><img src="/2021/06/01/Jenkins凭证配置/1.png" alt="1"></p><h3 id="2-在git仓库中配置ssh公钥"><a href="#2-在git仓库中配置ssh公钥" class="headerlink" title="2. 在git仓库中配置ssh公钥"></a>2. 在git仓库中配置ssh公钥</h3><p>以公司用的云效代码仓库为例（其他仓库如github等操作同理），<br>首先点击右上角的头像，在菜单中点击“个人设置”<br><img src="/2021/06/01/Jenkins凭证配置/2.png" alt="2"><br>在弹出窗口中选择“SSH公钥”，在公钥处将本地的id_rsa.pub文件的内容粘贴过来，标题自己取一个就可以<br><img src="/2021/06/01/Jenkins凭证配置/3.png" alt="3"><br>添加成功后下方会显示你已经配置过的公钥，此时git仓库相关配置已完毕<br><img src="/2021/06/01/Jenkins凭证配置/4.png" alt="4"></p><h2 id="jenkins仓库ssh配置"><a href="#jenkins仓库ssh配置" class="headerlink" title="jenkins仓库ssh配置"></a>jenkins仓库ssh配置</h2><h3 id="1-打开添加凭据页面"><a href="#1-打开添加凭据页面" class="headerlink" title="1. 打开添加凭据页面"></a>1. 打开添加凭据页面</h3><p>在jenkins首页选择“凭据 -&gt; 系统 -&gt; 全局凭据 -&gt; 添加凭据”<br><img src="/2021/06/01/Jenkins凭证配置/5.png" alt="5"></p><h3 id="2-添加凭据"><a href="#2-添加凭据" class="headerlink" title="2. 添加凭据"></a>2. 添加凭据</h3><p>在“类型“选项中选择”SSH Username with private key“，并勾选下方”Private Key”选项中的“Enter directly”，再点击右侧的“Add”按钮，将本地的id_rsa文件的内容粘贴到”Private Key”选项中，给Username起一个名称，最后点击“确定”即可为jenkins添加一个凭据<br><img src="/2021/06/01/Jenkins凭证配置/6.png" alt="6"></p><h2 id="选择新的凭证"><a href="#选择新的凭证" class="headerlink" title="选择新的凭证"></a>选择新的凭证</h2><h3 id="1-选择凭证"><a href="#1-选择凭证" class="headerlink" title="1. 选择凭证"></a>1. 选择凭证</h3><ol><li>在jenkins中选择一个项目，点击“配置”，在配置中找到源码管理，此处的“Repository URL”对应了该项目要使用的源码地址，在此处输入新的源码地址（如下图所示即可找到地址），并在下方“Credentials”中选择新建的和该仓库对应的凭证即可完成配置（点击右侧”添加按钮也可以走上面的添加凭证的流程”）。<br><img src="/2021/06/01/Jenkins凭证配置/7.png" alt="7"><br><img src="/2021/06/01/Jenkins凭证配置/8.png" alt="8"></li></ol><h3 id="2-此时项目应该就可以顺利编译了，撒花★-°-☆-￣▽￣-°★-。"><a href="#2-此时项目应该就可以顺利编译了，撒花★-°-☆-￣▽￣-°★-。" class="headerlink" title="2. 此时项目应该就可以顺利编译了，撒花★,°:.☆(￣▽￣)/$:.°★ 。"></a>2. 此时项目应该就可以顺利编译了，撒花<em>★,°</em>:.☆(￣▽￣)/$:<em>.°★</em> 。</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;来源：git仓库切换后，jenkins上编译的配置也需要修改对应的仓库地址，此时需要配置一个新的仓库地址的凭证才能正常进行编译。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="项目配置" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="前端基础" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>React Native视频缓存解决方案</title>
